@@ -70,7 +70,6 @@ export const imgUpload = async data => {
 };
 /** 文件上传接口 */
 export const fileUpload = async (content: string, name: string) => {
-  debugger;
   // const res = data.raw;
   const formData = new FormData();
   formData.append("fileContent", content);

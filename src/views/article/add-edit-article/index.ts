@@ -151,7 +151,6 @@ export function useArticle() {
         fullscreen: true,
         text: "内容上传中"
       });
-      debugger;
       const res = await fileUpload(
         articleForm.article_content,
         articleForm.article_title
@@ -262,6 +261,7 @@ export function useArticle() {
           res = await editArticle({ article: finalArticle });
         }
         if (res.code == 0) {
+          debugger;
           message(res.message, { type: "success" });
           resetForm(formEl.value);
           resetForm(articleFormRef.value);
