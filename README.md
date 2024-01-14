@@ -63,14 +63,14 @@ github 仓库地址： [https://github.com/lhyhyl/blog-admin](https://gitee.com/
 
 gitee 仓库地址：[https://github.com/lhyhyl/blog-server](https://gitee.com/mrzym/blogServer)
 
-## 🚀 博客前台下载运行
+## 🚀 博客后台下载运行
 
 ```git
 # pnpm 版本 v8.14.0
 # node 版本 v21.5.0
 
 1、下载项目
-git clone https://github.com/lhyhyl/blog.git
+git clone https://github.com/lhyhyl/blog-admin.git
 tips: 也可以下载zip打开，这样不会和我的仓库关联，也可以自己去解除关联
 2、打开项目，安装依赖（安装依赖报错可以降低自己的npm版本或者网上百度解决方法，一般情况下不会有问题）
 pnpm i
@@ -103,36 +103,4 @@ pnpm run serve
 
 #### 功能开发
 
-目前的功能是满足个人使用的，如果有更好玩的功能，可以推荐给我哦`<p align="center">`
-`<a href="https://nodejs.org/en/about/releases/">`
-`<img src="https://img.shields.io/badge/node-v18.17.0-green" alt="node compatibility">`
-`</a>`
-`<a href="https://element-plus.gitee.io/zh-CN/">`
-`<img src="https://img.shields.io/badge/ElementPlus-v2.2.17-blue" alt="Element Plus">`
-`</a>`
-`<a href="https://nodejs.org/en/about/releases/">`
-`<img src="https://img.shields.io/badge/vite-4.4.0-purple" alt="node compatibility">`
-`</a>`
-`<a href="https://cn.vuejs.org/">`
-`<img src="https://img.shields.io/badge/Vue-v3.3.4-brightgreen" alt="Vue.js">`
-`</a>`
-`<a href="https://imzbf.github.io/md-editor-v3/docs#%F0%9F%A7%B1%20toolbarsExclude">`
-`<img src="https://img.shields.io/badge/md--editor--v3-v2.7.2-lightgrey" alt="md-editor-v3">`
-`</a>`
-`<a href="https://pinia.web3doc.top/">`
-`<img src="https://img.shields.io/badge/pinia-v2.0.28-yellowgreen" alt="pinia">`
-`</a>`
-`<a href="https://router.vuejs.org/zh/guide/">`
-`<img src="https://img.shields.io/badge/vue--router-v4.0.3-green" alt="vue-router">`
-`</a>`
-`<a href="https://vueuse.org/">`
-`<img src="https://img.shields.io/badge/vueuse-v%5E9.10.0-red" alt="vue-use">`
-`</a>`
-`<a href="https://www.axios-http.cn/docs/intro">`
-`<img src="https://img.shields.io/badge/axios-v%5E1.2.0-blueviolet" alt="axios">`
-`</a>`
-`<a href="https://www.dowebok.com/demo/2014/98/">`
-`<img src="https://img.shields.io/badge/animate-v%5E4.1.1-orange" alt="animate">`
-`</a>`
-
-</p>
+目前的功能是满足个人使用的，如果有更好玩的功能，可以推荐给我哦
