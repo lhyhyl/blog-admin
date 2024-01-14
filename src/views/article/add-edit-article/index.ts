@@ -10,7 +10,7 @@ import {
   getArticleById,
   titleExist
 } from "@/api/article";
-import { imgUpload, mdImgUpload } from "@/api/site";
+import { imgUpload, mdImgUpload, fileUpload } from "@/api/site";
 import { tagV, coverV } from "./validator";
 import { ElLoading } from "element-plus";
 import { useNav } from "@/layout/hooks/useNav";
@@ -144,7 +144,25 @@ export function useArticle() {
       upLoadLoading.close();
     }
   }
-
+  //文章内容上传
+  async function uploadContent() {
+    if (articleForm.article_content) {
+      const upLoadLoading = ElLoading.service({
+        fullscreen: true,
+        text: "内容上传中"
+      });
+      debugger;
+      const res = await fileUpload(
+        articleForm.article_content,
+        articleForm.article_title
+      );
+      if (res.code == 0) {
+        const { url } = res.result;
+        articleForm.article_content = url;
+      }
+      upLoadLoading.close();
+    }
+  }
   async function articleTitleVAlidate() {
     const { id, article_title } = articleForm;
     const res = await titleExist({ id, article_title });
@@ -221,9 +239,10 @@ export function useArticle() {
   async function submitForm(formEl, type) {
     await formEl.validate(async valid => {
       if (valid) {
+        // 文章内容上传
+        await uploadContent();
         // 图片上传
         await uploadCover();
-
         if (type == 1) {
           // 1 是保存草稿 2 是直接发布
           articleForm.status = 3;

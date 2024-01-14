@@ -192,7 +192,7 @@ onBeforeUnmount(() => {
     </div>
     <div class="filings">
       <a class="change-color" href="http://beian.miit.gov.cn/" target="_blank"
-        >蜀ICP备2023007772号</a
+        >蜀ICP备2024046861号-1</a
       >
     </div>
   </div>
@@ -219,6 +219,7 @@ onBeforeUnmount(() => {
     color: #676767;
   }
 }
+
 .line {
   cursor: pointer;
   text-decoration: underline;

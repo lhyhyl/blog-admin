@@ -68,7 +68,30 @@ export const imgUpload = async data => {
     });
   });
 };
+/** 文件上传接口 */
+export const fileUpload = async (content: string, name: string) => {
+  debugger;
+  // const res = data.raw;
+  const formData = new FormData();
+  formData.append("fileContent", content);
+  formData.append("fileName", name);
+  formData.append("fileDir", "article/"); //设定上传的文件夹
+  const token = getToken();
 
+  return new Promise<SiteResult>(resolve => {
+    Axios({
+      method: "post",
+      url: "/api/upload/file",
+      data: formData,
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Authorization: token.token
+      }
+    }).then(response => {
+      resolve(response.data);
+    });
+  });
+};
 /** md文档的图片上传接口 */
 export const mdImgUpload = async data => {
   // 文件压缩 太大了上传不了，我的服务器比较垃圾
